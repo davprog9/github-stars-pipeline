@@ -57,3 +57,19 @@ GH Archive is an invaluable resource for historical data analysis and large-scal
 In our case, it would be the best to work with GH Arhcive, simply because there are no request limitations. 
 
 Deliverable data format is in structured data tables. These tables will be optimized for querying using SQL, allowing for easier access and analysis. The data is updated daily to ensure we have the most current and relevant information available.
+
+## Models
+We are utilizing the Kimball methodology for data warehousing, which focuses on building a dimensional model to enhance analytics efficiency and scalability. For this, we are gathering possible list of facts and dimensions.
+
+### List of facts and dimesnions
+* **Fact**: Stars - **Dimensions**: dim_user, dim_repository, dim_datetime
+* **Fact**: Commits - **Dimensions**: dim_user, dim_repository, dim_branch, dim_datetime
+* **Fact**: Forks - **Dimensions**: dim_user, dim_repository, dim_datetime
+* **Fact**: Pull requests - **Dimensions**: dim_user, dim_repository, dim_reviewer, dim_datetime
+* **Fact**: Git clones - **Dimensions**: dim_user, dim_repository, dim_source, dim_datetime
+
+Here are some SQL queries for most common use cases
+
+![SQL Query](resources/screenshots/query1)
+
+![SQL Query](resources/screenshots/query2)
