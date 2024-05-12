@@ -70,6 +70,6 @@ We are utilizing the Kimball methodology for data warehousing, which focuses on 
 
 Here are some SQL queries for most common use cases
 
-![SQL Query](resources/screenshots/query1)
+![SQL Query1](resources/screenshots/query1.png)
 
-![SQL Query](resources/screenshots/query2)
+![SQL Query2](resources/screenshots/query2.png)
