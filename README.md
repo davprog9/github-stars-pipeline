@@ -56,4 +56,4 @@ Lets discuss the difference between them, the pros and cons.
 GH Archive is an invaluable resource for historical data analysis and large-scale trend observations on GitHub projects. However, its use involves significant data handling, processing demands, and potential costs, making it less suitable for real-time applications, small-scale needs, or users without substantial data processing capabilities. For tasks requiring real-time data or targeted queries, the GitHub API may be a more appropriate choice.
 In our case, it would be the best to work with GH Arhcive, simply because there are no request limitations. 
 
-Deliverable data format is in structured data tables. These tables will be optimized for querying using SQL, allowing for easier access and analysis.
+Deliverable data format is in structured data tables. These tables will be optimized for querying using SQL, allowing for easier access and analysis. The data is updated daily to ensure we have the most current and relevant information available.
