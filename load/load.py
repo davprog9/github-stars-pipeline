@@ -24,8 +24,7 @@ if not os.path.exists(target_dir):
     for file in files:
         unzip_json_file(source_directory, target_dir, file)
 
-db_path = os.path.join(target_dir, 'gharchive.db')
-con = duckdb.connect(database="github_stars.db", read_only=False)
+con = duckdb.connect(database="github_stars.db")
 
 con.execute("CREATE SCHEMA IF NOT EXISTS source")
 
@@ -33,13 +32,7 @@ json_files = [os.path.join(target_dir, f) for f in os.listdir(target_dir) if f.e
 
 con.execute(f"""
         CREATE OR REPLACE TABLE source.src_gharchive AS 
-        SELECT * FROM read_json_auto('{json_files[0]}')
-    """)
-
-for json_file in json_files[1:]:
-    con.execute(f"""
-        INSERT INTO source.src_gharchive
-        SELECT * FROM read_json_auto('{json_file}')
+        SELECT * FROM read_json_auto('{target_dir}/*.json')
     """)
 
 con.close()
