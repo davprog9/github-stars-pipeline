@@ -1,7 +1,3 @@
-SELECT 
-    event_date, 
-    repo_id, 
-    COUNT(event_type) as "commits"
+SELECT event_date, repo_id, event_type
 FROM {{ ref("stg_gharchive") }} 
 WHERE event_type = 'Push'
-GROUP BY event_date, repo_id
