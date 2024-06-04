@@ -1,0 +1,6 @@
+github_stars: 
+ target: dev 
+ outputs: 
+   dev: 
+     type: duckdb 
+     path: '/Users/davidarzumanyan/Desktop/OA_Project/github-stars-pipeline/github_stars.db'

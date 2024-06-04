@@ -1,8 +1,16 @@
 # GitHub Gems: Driving Open-Source Investments With Data
 
+## Table of contents
+* [Overview](#Overview)
+* [Important metrics](#Important-metrics)
+* [Data source](#data-source)
+* [Models](#Models)
+
+<a name="Overview"></a>
 ## Overview
 Our goal is to develop an efficient data pipeline that streamlines analytics, reduces manual effort, and enables deeper insights into the open-source ecosystem on GitHub. By leveraging modern data tools and best practices, such as dbt (data build tool) and Airflow, we aim to create a scalable and reliable solution for data-driven decision-making.
 
+<a name="Important metrics"></a>
 ## Important metrics
 To optimize our pipeline, we are extracting. These metrics offer a detailed and measurable overview of an open-source project's health, growth potential, and overall performance. By analyzing these metrics, we can make informed decisions on resource allocation to maximize impact and efficiency.
 
@@ -28,6 +36,7 @@ Git clones are essential metrics that show how many times a repository has been 
 ### Package Downloads
 Package downloads are significant metrics that reflect the number of times a software package has been downloaded, demonstrating its usage and popularity.
 
+<a name="Data source"></a>
 ## Data source
 For the source of data we have a few options, but we are more interest in two of them, GitHub API and GH Archive. 
 Lets discuss the difference between them, the pros and cons.
@@ -58,6 +67,7 @@ In our case, it would be the best to work with GH Arhcive, simply because there 
 
 Deliverable data format is in structured data tables. These tables will be optimized for querying using SQL, allowing for easier access and analysis. The data is updated daily to ensure we have the most current and relevant information available.
 
+<a name="Models"></a>
 ## Models
 We are utilizing the Kimball methodology for data warehousing, which focuses on building a dimensional model to enhance analytics efficiency and scalability. For this, we are gathering possible list of facts and dimensions.
 
