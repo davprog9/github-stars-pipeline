@@ -83,3 +83,6 @@ Here are some SQL queries for most common use cases
 ![SQL Query1](resources/screenshots/query1.png)
 
 ![SQL Query2](resources/screenshots/query2.png)
+
+### DBT dag diagram
+![dbt dag diagram](resources/screenshots/dbt-dag.png)
