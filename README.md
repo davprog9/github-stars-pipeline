@@ -84,10 +84,8 @@ Here are some SQL queries for most common use cases
 
 ![SQL Query2](resources/screenshots/query2.png)
 
-### DBT dag diagram
-Visual representation of the data transformation workflow
+### DBT dag diagram - Visual representation of the data transformation workflow
 ![dbt dag diagram](resources/screenshots/dbt-dag.png)
 
-### The chart represents the cumulative number of stars received by each repository over time. 
-It allows us to see the growth in popularity of each repository over time.
+### The chart represents the cumulative number of stars received by each repository over time. It allows us to see the growth in popularity of each repository over time.
 ![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
