@@ -86,3 +86,7 @@ Here are some SQL queries for most common use cases
 
 ### DBT dag diagram
 ![dbt dag diagram](resources/screenshots/dbt-dag.png)
+
+### The chart represents the cumulative number of stars received by each repository over time.
+### It allows us to see the growth in popularity of each repository over time.
+![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
