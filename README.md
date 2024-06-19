@@ -10,6 +10,9 @@
 ## Overview
 Our goal is to develop an efficient data pipeline that streamlines analytics, reduces manual effort, and enables deeper insights into the open-source ecosystem on GitHub. By leveraging modern data tools and best practices, such as dbt (data build tool) and Airflow, we aim to create a scalable and reliable solution for data-driven decision-making.
 
+### Lineage Graph
+![dbt dag diagram](resources/screenshots/dbt-dag.png)
+
 <a name="Important metrics"></a>
 ## Important metrics
 To optimize our pipeline, we are extracting. These metrics offer a detailed and measurable overview of an open-source project's health, growth potential, and overall performance. By analyzing these metrics, we can make informed decisions on resource allocation to maximize impact and efficiency.
@@ -83,6 +86,3 @@ Here are some SQL queries for most common use cases
 ![SQL Query1](resources/screenshots/query1.png)
 
 ![SQL Query2](resources/screenshots/query2.png)
-
-### DBT dag diagram
-![dbt dag diagram](resources/screenshots/dbt-dag.png)
