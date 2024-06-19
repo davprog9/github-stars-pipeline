@@ -36,6 +36,9 @@ Git clones are essential metrics that show how many times a repository has been 
 ### Package Downloads
 Package downloads are significant metrics that reflect the number of times a software package has been downloaded, demonstrating its usage and popularity.
 
+## Sample Chart: Cumulative Stars per Repo
+![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
+
 <a name="Data source"></a>
 ## Data source
 For the source of data we have a few options, but we are more interest in two of them, GitHub API and GH Archive. 
@@ -86,6 +89,3 @@ Here are some SQL queries for most common use cases
 
 ### DBT dag diagram - Visual representation of the data transformation workflow
 ![dbt dag diagram](resources/screenshots/dbt-dag.png)
-
-### The chart represents the cumulative number of stars received by each repository over time. It allows us to see the growth in popularity of each repository over time.
-![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
