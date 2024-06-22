@@ -39,6 +39,10 @@ Git clones are essential metrics that show how many times a repository has been 
 ### Package Downloads
 Package downloads are significant metrics that reflect the number of times a software package has been downloaded, demonstrating its usage and popularity.
 
+
+## Sample Chart: Cumulative Stars per Repo
+![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
+
 Here are some SQL queries for most common use cases
 
 ![SQL Query1](resources/screenshots/query1.png)
