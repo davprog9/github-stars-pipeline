@@ -10,6 +10,9 @@
 ## Overview
 Our goal is to develop an efficient data pipeline that streamlines analytics, reduces manual effort, and enables deeper insights into the open-source ecosystem on GitHub. By leveraging modern data tools and best practices, such as dbt (data build tool) and Airflow, we aim to create a scalable and reliable solution for data-driven decision-making.
 
+## Lineage Graph
+![dbt dag diagram](resources/screenshots/dbt-dag.png)
+
 <a name="Important metrics"></a>
 ## Important metrics
 To optimize our pipeline, we are extracting. These metrics offer a detailed and measurable overview of an open-source project's health, growth potential, and overall performance. By analyzing these metrics, we can make informed decisions on resource allocation to maximize impact and efficiency.
@@ -36,8 +39,15 @@ Git clones are essential metrics that show how many times a repository has been 
 ### Package Downloads
 Package downloads are significant metrics that reflect the number of times a software package has been downloaded, demonstrating its usage and popularity.
 
+
 ## Sample Chart: Cumulative Stars per Repo
 ![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
+
+Here are some SQL queries for most common use cases
+
+![SQL Query1](resources/screenshots/query1.png)
+
+![SQL Query2](resources/screenshots/query2.png)
 
 <a name="Data source"></a>
 ## Data source
@@ -80,12 +90,3 @@ We are utilizing the Kimball methodology for data warehousing, which focuses on 
 * **Fact**: Forks - **Dimensions**: dim_user, dim_repository, dim_datetime
 * **Fact**: Pull requests - **Dimensions**: dim_user, dim_repository, dim_reviewer, dim_datetime
 * **Fact**: Git clones - **Dimensions**: dim_user, dim_repository, dim_source, dim_datetime
-
-Here are some SQL queries for most common use cases
-
-![SQL Query1](resources/screenshots/query1.png)
-
-![SQL Query2](resources/screenshots/query2.png)
-
-### DBT dag diagram - Visual representation of the data transformation workflow
-![dbt dag diagram](resources/screenshots/dbt-dag.png)
