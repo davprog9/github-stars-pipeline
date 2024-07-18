@@ -42,13 +42,30 @@ Package downloads are significant metrics that reflect the number of times a sof
 
 ## Sample Charts: Cumulative Stars per Repo
 ![Stars per month growth for each repo](resources/screenshots/stars_by_month.png)
-![Stars per year growth for each repo](resources/screenshots/stars_by_year.png)
+![Stars per year growth for each repo](resources/screenshots/yoy_growth.png)
 
 Here are some SQL queries for most common use cases
 
-![SQL Query1](resources/screenshots/query1.png)
+```
+-- Counting the number of commits for the "plotly" repository
+-- during the current month of the previous year
 
-![SQL Query2](resources/screenshots/query2.png)
+SELECT COUNT(*) AS total_commits
+FROM fact_commit
+WHERE dim_repository = 'plotly'
+AND dim_datetime >= DATE_TRUN('month', CURRENT_DATE - INTERVAL '1 year')
+AND dim_datetime < DATE_TRUNC('month', CURRENT_DATE - INTERVAL '11 months')
+
+```
+
+```
+-- Selecting the number of stars for a specific repository
+
+SELECT COUNT(*) AS StarsCount
+FROM fact_stars
+WHERE dim_repository = 'plotly'
+
+```
 
 <a name="Data source"></a>
 ## Data source
